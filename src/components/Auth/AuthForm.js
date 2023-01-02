@@ -8,15 +8,15 @@ const AuthForm = () => {
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
 
-  const enteredEmail = emailInputRef.current.value;
-  const enteredPassword = passwordInputRef.current.value;
-
   const switchAuthModeHandler = () => {
     setIsLogin((prevState) => !prevState);
   };
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
+
+    const enteredEmail = emailInputRef.current.value;
+    const enteredPassword = passwordInputRef.current.value;
     if (isLogin) {
     } else {
       fetch(
