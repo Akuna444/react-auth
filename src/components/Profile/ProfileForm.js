@@ -8,6 +8,8 @@ const ProfileForm = () => {
   const authCtx = useContext(AuthContext);
   const history = useHistory();
 
+
+
   const onSubmitHandler = (event) => {
     event.preventDefault();
     const enteredPassword = passwordInputRef.current.value;
@@ -37,6 +39,7 @@ const ProfileForm = () => {
       </div>
       <div className={classes.action}>
         <button>Change Password</button>
+      
       </div>
     </form>
   );
