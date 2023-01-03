@@ -1,5 +1,5 @@
 import classes from "./ProfileForm.module.css";
-import { useRef, useContext } from "react";
+import { useRef, useContext, useHistory } from "react";
 import AuthContext from "../../store/auth-context";
 
 const ProfileForm = () => {
@@ -9,6 +9,7 @@ const ProfileForm = () => {
     event.preventDefault();
     const enteredPassword = passwordInputRef.current.value;
     const authCtx = useContext(AuthContext)
+    const history = useHistory()
 
     fetch(,{
       method:"POST",
@@ -22,7 +23,7 @@ const ProfileForm = () => {
       }
       
     }).then(response => {
-      
+      history.replace("/")
     });
   };
   return (
